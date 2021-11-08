@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Application.Adapter.Core\Application.Adapter.Core.csproj" />
+    <ProjectReference Include="..\Application.Interface.TechnicalExercise\Application.Interface.TechnicalExercise.csproj" />
+    <ProjectReference Include="..\Application.Service.Security\Application.Service.Security.csproj" />
+    <ProjectReference Include="..\Infrastructure.Transversal.Core\Infrastructure.Transversal.Core.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Security\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.DirectoryServices" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Application.Adapter.Core\Application.Adapter.Core.csproj" />
+    <ProjectReference Include="..\Application.Interface.Security\Application.Interface.Security.csproj" />
+    <ProjectReference Include="..\Domain.Security\Domain.Security.csproj" />
+    <ProjectReference Include="..\Infrastructure.Security\Infrastructure.Security.csproj" />
+    <ProjectReference Include="..\Infrastructure.Transversal.Core\Infrastructure.Transversal.Core.csproj" />
+  </ItemGroup>
+
+</Project>

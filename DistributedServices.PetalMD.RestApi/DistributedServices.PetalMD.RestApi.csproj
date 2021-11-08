@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.9" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.8.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Application.Adapter.Core\Application.Adapter.Core.csproj" />
+    <ProjectReference Include="..\Application.DTO.Core\Application.DTO.Core.csproj" />
+    <ProjectReference Include="..\Application.Interface.Security\Application.Interface.Security.csproj" />
+    <ProjectReference Include="..\Application.Interface.TechnicalExercise\Application.Interface.TechnicalExercise.csproj" />
+    <ProjectReference Include="..\Application.Service.Security\Application.Service.Security.csproj" />
+    <ProjectReference Include="..\Application.Service.TechnicalExercise\Application.Service.TechnicalExercise.csproj" />
+    <ProjectReference Include="..\DistributedServices.Core\DistributedServices.Core.csproj" />
+    <ProjectReference Include="..\Domain.Core\Domain.Core.csproj" />
+    <ProjectReference Include="..\Infrastructure.Security\Infrastructure.Security.csproj" />
+    <ProjectReference Include="..\Infrastructure.TechinicalExercise\Infrastructure.TechinicalExercise.csproj" />
+  </ItemGroup>
+
+
+</Project>

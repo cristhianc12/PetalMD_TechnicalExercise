@@ -1,0 +1,655 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DistributedServices.Security.RestApi</name>
+    </assembly>
+    <members>
+        <!--<member name="T:DistributedServices.Security.RestApi.Controllers.AplicacionController">
+            <summary>
+            </summary>
+        </member>-->
+        <!--<member name="M:DistributedServices.Security.RestApi.Controllers.AplicacionController.#ctor(Application.Interface.Security.IAplicacionAppService)">
+            <summary>
+            
+            </summary>
+            <param name="aplicacionAppService"></param>
+        </member>-->
+        <!--<member name="M:DistributedServices.Security.RestApi.Controllers.AplicacionController.GetAplicacionList(Domain.Core.ModelFilter.BaseFilter)">
+            <summary>
+            Consultar lista de aplicación
+            </summary>
+            <remarks>
+            {
+                "searchText": "",
+                "desc": false,
+                "skip": 0,
+                "take": 0
+            }
+            </remarks>
+            <param name="oBaseFilter"></param>
+            <returns></returns>
+            <response code="200">
+            {
+                "totalRegister": 1,
+                "listResult": [
+                    {
+                        "idAplicacion": 1,
+                        "nombreAplicacion": "FDIM.CO",
+                        "diasExpiracionToken": 1,
+                        "owner": "icastellanos",
+                        "dateOwner": "2021-02-03T09:16:27.903",
+                        "lastModify": "icastellanos",
+                        "lastDate": "2021-02-03T09:16:27.903"
+                    }
+                ],
+                "totalPages": 0,
+                "next": false,
+                "previous": false
+            }
+            </response>
+        </member>-->
+        <member name="T:DistributedServices.Security.RestApi.Controllers.AuthController">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:DistributedServices.Security.RestApi.Controllers.AuthController.#ctor(Application.Interface.Security.IUsersAppService)">
+            <summary>
+            </summary>
+            <param name="usersAppService"></param>
+        </member>
+        <member name="M:DistributedServices.Security.RestApi.Controllers.AuthController.Post(Application.DTO.Security.CredentialDTO)">
+             <summary>
+             Login
+             </summary>
+             <remarks>
+             POST
+             {
+                "Usuario": "cbuitrago",
+                "password": "CONTRASENA",
+                "IP": "10.0.0.1",
+                "UserHostAddress": "10.0.0.1",
+                "SistemaOperativo": "Windows",
+                "Explorador": "Chrome"
+            }
+             </remarks>
+             <param name="oCredentialDTO"></param>
+             <returns></returns>
+        </member>
+        <!--<member name="T:DistributedServices.Security.RestApi.Controllers.IdiomasController">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:DistributedServices.Security.RestApi.Controllers.IdiomasController.#ctor(Application.Interface.Security.IIdiomasAppService)">
+            <summary>
+            </summary>
+            <param name="idiomasAppService"></param>
+        </member>
+        <member name="M:DistributedServices.Security.RestApi.Controllers.IdiomasController.GetIdiomasList(Domain.Core.ModelFilter.BaseFilter)">
+            <summary>
+            Consultar lista de aplicación
+            </summary>
+            <remarks>
+            {
+                "searchText": "",
+                "desc": false,
+                "skip": 0,
+                "take": 0
+            }
+            </remarks>
+            <param name="oBaseFilter"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DistributedServices.Security.RestApi.Controllers.MenuOpcionesController">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:DistributedServices.Security.RestApi.Controllers.MenuOpcionesController.#ctor(Application.Interface.Security.IMenuOpcionesAppService,Application.Interface.Security.IMenuAccionesAppService)">
+            <summary>
+            </summary>
+            <param name="menuOpcionesAppService"></param>
+            <param name="menuAccionesAppService"></param>
+        </member>
+        <member name="M:DistributedServices.Security.RestApi.Controllers.MenuOpcionesController.GetMenuOpcionesList(Application.DTO.Security.MenuOpcionesFilterDTO)">
+            <summary>
+            Consultar arbol de menu
+            </summary>
+            <param name="oMenuOpcionesFilterDTO"></param>
+            <returns></returns>
+            <remarks>
+            {
+                "searchText": "",
+                "IdAplicacion": 0
+            }
+            </remarks>
+        </member>
+        <member name="M:DistributedServices.Security.RestApi.Controllers.MenuOpcionesController.GetMenuOpcionesById(Domain.Core.ModelFilter.BaseFilter)">
+            <summary>
+            Consultar menú por id
+            </summary>
+            <param name="oBaseFilter"></param>
+            <returns></returns>
+            <remarks>
+            {
+                "id": "12"
+            }
+            </remarks>
+        </member>
+        <member name="M:DistributedServices.Security.RestApi.Controllers.MenuOpcionesController.CreateMenuOpciones(Application.DTO.Security.MenuOpcionesDTO)">
+            <summary>
+            Crear opción del menú
+            </summary>
+            <param name="oMenuOpcionesDTO"></param>
+            <returns></returns>
+            <remarks>
+            {
+                "descripcionEN": "Menu Option",
+                "nombreMenuOpcionEN": "Menu Option",
+                "idAplicacion": 1,
+                "nombreMenuOpcion": "Opciones Menú",
+                "descripcion": "Opciones Menú",
+                "idParent": 41,
+                "idOrden": 0,
+                "nombreController": "/MenuOpciones/Index",
+                "icono": "far fa-list-alt",
+                "color": "",
+                "configuracion": "",
+                "prefijo": ""
+            }
+            </remarks>
+        </member>
+        <member name="M:DistributedServices.Security.RestApi.Controllers.MenuOpcionesController.UpdateMenuOpciones(Application.DTO.Security.MenuOpcionesDTO)">
+            <summary>
+            Actualizar opción del menú
+            </summary>
+            <param name="oMenuOpcionesDTO"></param>
+            <returns></returns>
+            <remarks>
+            {
+                "descripcionEN": "Roles",
+                "nombreMenuOpcionEN": "Roles",
+                "idMenuOpcion": 13,
+                "nombreMenuOpcion": "Roles",
+                "descripcion": "Roles",
+                "idOrden": 1,
+                "nombreController": "/Roles/Index",
+                "icono": "fa fa-users",
+                "color": "",
+                "configuracion": "",
+                "isActive": true,
+                "prefijo": ""
+            }
+            </remarks>
+        </member>
+        <member name="M:DistributedServices.Security.RestApi.Controllers.MenuOpcionesController.GetMenuAccionesList(Application.DTO.Security.MenuOpcionesFilterDTO)">
+            <summary>
+            Consultar acciones por menú
+            </summary>
+            <remarks>
+            {
+                "IdMenuOpcion": 13,
+                "searchText": "",
+                "id": "",
+                "desc": false,
+                "columnOrderBy": "",
+                "skip": 0,
+                "take": 0
+            }
+            </remarks> 
+            <param name="oMenuOpcionesFilterDTO"></param>
+            <returns></returns>
+            <response code="200">
+            {
+                "totalRegister": 1,
+                "listResult": [
+                    {
+                        "idMenuOpcion": 13,
+                        "idAccion": 6,
+                        "nombreAccion": "Actualizar roles",
+                        "serviceName": "/Roles/UpdateRol",
+                        "componenteFront": "UpdateRol",
+                        "owner": "icastellanos",
+                        "dateOwner": "2021-02-23T00:00:00",
+                        "lastModify": "icastellanos",
+                        "lastDate": "2021-02-23T00:00:00"
+                    }
+                ],
+                "totalPages": 0,
+                "next": false,
+                "previous": false
+            }
+            </response>
+        </member>
+        <member name="M:DistributedServices.Security.RestApi.Controllers.MenuOpcionesController.CreateMenuAcciones(Application.DTO.Security.MenuAccionesDTO)">
+            <summary>
+            Crear acción del menú
+            </summary>
+            <param name="oMenuAccionesDTO"></param>
+            <returns></returns>
+            <remarks>
+            {
+                "idMenuOpcion": 50,
+                "nombreAccion": "Actualizar menú opción",
+                "serviceName": "/MenuOpciones/UpdateMenuOpciones",
+                "componenteFront": "UpdateMenuOpcion"
+            }
+            </remarks>
+        </member>
+        <member name="M:DistributedServices.Security.RestApi.Controllers.MenuOpcionesController.UpdateMenuAcciones(Application.DTO.Security.MenuAccionesDTO)">
+            <summary>
+            Actaualizar acción del menú
+            </summary>
+            <param name="oMenuAccionesDTO"></param>
+            <returns></returns>
+            <remarks>
+            {
+                "idMenuOpcion": 50,
+                "idAccion": 1,
+                "nombreAccion": "Crear menú opción",
+                "serviceName": "/MenuOpciones/CreateMenuOpciones",
+                "componenteFront": "CreateMenuOpcion"
+            }
+            </remarks>
+        </member>
+        <member name="M:DistributedServices.Security.RestApi.Controllers.MenuOpcionesController.DeleteMenuAcciones(Application.DTO.Security.MenuAccionesFilterDTO)">
+            <summary>
+            Eliminar acción del menú
+            </summary>
+            <param name="oMenuAccionesFilterDTO"></param>
+            <returns></returns>
+            <remarks>
+            {
+                "idMenuOpcion": 50,
+                "IdAccion": 2
+            }
+            </remarks>
+        </member>
+        <member name="T:DistributedServices.Security.RestApi.Controllers.RolesController">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:DistributedServices.Security.RestApi.Controllers.RolesController.#ctor(Application.Interface.Security.IUsuarioRolBodegaAppService,Application.Interface.Security.IUsuarioRolAppService,Application.Interface.Security.IRolAppService,Application.Interface.Security.IRolesOpcionesAccionAppService)">
+            <summary>
+            </summary>
+            <param name="usuarioRolBodegaAppService"></param>
+            <param name="usuarioRolAppService"></param>
+            <param name="rolAppService"></param>
+            <param name="rolesOpcionesAccionAppService"></param>
+        </member>
+        <member name="M:DistributedServices.Security.RestApi.Controllers.RolesController.GetUsuarioRolBodega">
+            <summary>
+            Get usuario permissions
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DistributedServices.Security.RestApi.Controllers.RolesController.GetUsuarioRolByBodega(Application.DTO.Security.UsuarioRolBodegaFilterDTO)">
+             <summary>
+             Get permissions by bodega
+             </summary>
+             <param name="oUsuarioRolBodegaFilterDTO"></param>
+             <remarks>
+            {
+                "idBodega": 2
+            }
+             </remarks>
+             <returns></returns>
+        </member>
+        <member name="M:DistributedServices.Security.RestApi.Controllers.RolesController.GetUsuarioMenuAccion">
+            <summary>
+            Get menu by usuario premissions
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DistributedServices.Security.RestApi.Controllers.RolesController.GetUsuarioMenuAccionByMenu(Application.DTO.Security.MenuOpcionesFilterDTO)">
+            <summary>
+            Get menu, action by usuario premissions and menu
+            </summary>
+            <remarks>
+            {
+               "IdMenuOpcion": 8
+            }
+            </remarks> 
+            <returns></returns>
+        </member>
+        <member name="M:DistributedServices.Security.RestApi.Controllers.RolesController.GetUsuarioAccionByMenu(Application.DTO.Security.MenuOpcionesFilterDTO)">
+            <summary>
+            Get permissions by menu
+            </summary>
+            <param name="oMenuOpcionesFilterDTO"></param>
+            <remarks>
+            {
+               "IdMenuOpcion": 8
+            }
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:DistributedServices.Security.RestApi.Controllers.RolesController.GetPermissionsBodegaByUsuarioRol(Application.DTO.Security.UsuarioRolBodegaFilterDTO)">
+            <summary>
+            Consultar permisos de bodega por rol y usuario
+            </summary>
+            <param name="oUsuarioRolBodegaFilterDTO"></param>
+            <returns></returns>
+            <remarks>
+            {
+                "IdRol": 1,
+                "IdUsuario": 1
+            }
+            </remarks>
+        </member>
+        <member name="M:DistributedServices.Security.RestApi.Controllers.RolesController.CreateUsuarioRolBodega(Application.DTO.Security.UsuarioRolBodegaDTO)">
+            <summary>
+            Crear UsuarioRolBodega
+            </summary>
+            <param name="oUsuarioRolBodegaDTO"></param>
+            <returns></returns>
+            <remarks>
+            {
+                "idBodega": 5,
+                "oUsuarioRolDTO": {
+                    "IdRol": 5,
+                    "IdUsuario": 5
+                }
+            }
+            </remarks>
+        </member>
+        <member name="M:DistributedServices.Security.RestApi.Controllers.RolesController.DeleteUsuarioRolBodega(Application.DTO.Security.UsuarioRolBodegaDTO)">
+            <summary>
+            Eliminar UsuarioRolBodega
+            </summary>
+            <param name="oUsuarioRolBodegaDTO"></param>
+            <returns></returns>
+            <remarks>
+            {
+                "idBodega": 5,
+                "IdUsuarioRol": 54
+            }
+            </remarks>
+        </member>
+        <member name="M:DistributedServices.Security.RestApi.Controllers.RolesController.GetRolList(Domain.Core.ModelFilter.BaseFilter)">
+            <summary>
+            Consulta lista de roles
+            </summary>
+            <remarks>
+            {
+                "searchText": "",
+                "id": "",
+                "state": 3,
+                "desc": false,
+                "columnOrderBy": "",
+                "skip": 0,
+                "take": 0
+                
+            }
+            </remarks>
+            <param name="oBaseFilter"></param>
+            <returns></returns>
+            <response code="200">
+            {
+                "totalRegister": 1,
+                "listResult": [
+                    {
+                        "idRol": 3,
+                        "role": "Admin Pedidos",
+                        "roleDescription": "Administrador pedidos",
+                        "isActive": true,
+                        "owner": "icastellanos",
+                        "dateOwner": "2021-02-22T00:00:00",
+                        "lastModify": "icastellanos",
+                        "lastDate": "2021-02-22T00:00:00",
+                        "lstRolOpcionesDTO": []
+                }
+                ],
+                "totalPages": 0,
+                "next": false,
+                "previous": false
+            }
+            </response>
+        </member>
+        <member name="M:DistributedServices.Security.RestApi.Controllers.RolesController.CreateRol(Application.DTO.Security.RolDTO)">
+            <summary>
+            Crear un rol
+            </summary>
+            <param name="oRolDTO"></param>
+            <remarks>
+            {
+                "Role": "Compra de flor",
+                "RoleDescription": "Compra de flor"
+            }
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:DistributedServices.Security.RestApi.Controllers.RolesController.UpdateRol(Application.DTO.Security.RolDTO)">
+            <summary>
+            Actualizar un rol
+            </summary>
+            <param name="oRolDTO"></param>
+            <remarks>
+            {
+                "IdRol": 6,
+                "Role": "Compra de flor",
+                "RoleDescription": "Compra de flor",
+                "IsActive": true
+            }
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:DistributedServices.Security.RestApi.Controllers.RolesController.GetRolPermissions(Application.DTO.Security.RolFilterDTO)">
+            <summary>
+            Consultar permisos por rol y aplicación
+            </summary>
+            <param name="oRolFilterDTO"></param>
+            <returns></returns>
+            <remarks>
+            {
+                "IdRol": 1,
+                "IdAplicacion": 1
+            }
+            </remarks>
+        </member>
+        <member name="M:DistributedServices.Security.RestApi.Controllers.RolesController.GetRolPermissionsMenuAcciones(Application.DTO.Security.RolFilterDTO)">
+            <summary>
+            Consultar permisos de acción por rol y menú
+            </summary>
+            <param name="oRolFilterDTO"></param>
+            <returns></returns>
+            <remarks>
+            {
+                "IdRol": 1,
+                "IdMenuOpcion": 1
+            }
+            </remarks>
+        </member>
+        <member name="M:DistributedServices.Security.RestApi.Controllers.RolesController.CreateRolOpciones(Application.DTO.Security.RolOpcionesDTO)">
+            <summary>
+            Crear RolOpciones
+            </summary>
+            <param name="oRolOpcionesDTO"></param>
+            <returns></returns>
+            <remarks>
+            {
+                "IdRol": 5,
+                "IdMenuOpcion": 10007
+            }
+            </remarks>
+        </member>
+        <member name="M:DistributedServices.Security.RestApi.Controllers.RolesController.DeleteRolOpciones(Application.DTO.Security.RolOpcionesDTO)">
+            <summary>
+            Eliminar RolOpciones
+            </summary>
+            <param name="oRolOpcionesDTO"></param>
+            <returns></returns>
+            <remarks>
+            {
+                "IdRol": 5,
+                "IdMenuOpcion": 53
+            }
+            </remarks>
+        </member>
+        <member name="M:DistributedServices.Security.RestApi.Controllers.RolesController.CreateRolesOpcionesAccion(Application.DTO.Security.RolesOpcionesAccionDTO)">
+            <summary>
+            Crear RolesOpcionesAccion
+            </summary>
+            <param name="oRolesOpcionesAccionDTO"></param>
+            <returns></returns>
+            <remarks>
+            {
+                "IdRol": 5,
+                "IdMenuOpcion": 54,
+                "IdAccion": 1
+            }
+            </remarks>
+        </member>
+        <member name="M:DistributedServices.Security.RestApi.Controllers.RolesController.DeleteRolesOpcionesAccion(Application.DTO.Security.RolFilterDTO)">
+            <summary>
+            Eliminar un RolesOpcionesAccion
+            </summary>
+            <param name="oRolFilterDTO"></param>
+            <returns></returns>
+            <remarks>
+            {
+                "IdRol": 5,
+                "IdMenuOpcion": 54,
+                "id": "d"
+            }
+            </remarks>
+        </member>
+        <member name="T:DistributedServices.Security.RestApi.Controllers.UsuarioController">
+            <summary>
+            </summary>
+        </member>-->
+        <!--<member name="M:DistributedServices.Security.RestApi.Controllers.UsuarioController.#ctor(Application.Interface.Security.ISecusuariosAppService,Application.Interface.Security.IUsuarioRolAppService)">
+            <summary>
+            
+            </summary>
+            <param name="secusuariosAppService"></param>
+            <param name="usuarioRolAppService"></param>
+        </member>-->
+        <!--<member name="M:DistributedServices.Security.RestApi.Controllers.UsuarioController.GetUsuarioList(Domain.Core.ModelFilter.BaseFilter)">
+            <summary>
+            Get usuario list
+            </summary>
+            <param name="oBaseFilter"></param>
+            <returns></returns>
+            <remarks>
+            {
+                "searchText": "",
+                "desc": false,
+                "columnOrderBy": "",
+                "skip": 0,
+                "take": 0,
+                "state": 3
+            }
+            </remarks>
+        </member>
+        <member name="M:DistributedServices.Security.RestApi.Controllers.UsuarioController.CreateSecusuarios(Application.DTO.Security.SecusuariosSaveDTO)">
+            <summary>
+            Crear usuario que no pertenece al dominio
+            </summary>
+            <param name="oSecusuariosSaveDTO"></param>
+            <returns></returns>
+            <remarks>
+            {
+                "Usuario": "ivcas07@messenger.com",
+                "Nombre": "Iván Castellanos",
+                "Email": "ivcas07@messenger.com",
+                "IDempleado": 0,
+                "Ididioma": 1,
+                "IsActive": true
+            }
+            </remarks>
+        </member>
+        <member name="M:DistributedServices.Security.RestApi.Controllers.UsuarioController.UpdateSecusuarios(Application.DTO.Security.SecusuariosSaveDTO)">
+            <summary>
+            Editar usuario que no pertenece al dominio
+            </summary>
+            <param name="oSecusuariosSaveDTO"></param>
+            <returns></returns>
+            <remarks>
+            {
+                "Idusuario": 51969,
+                "Usuario": "ivcas07@gmail.com",
+                "Nombre": "Iván Castellanos",
+                "Email": "ivcas07@gmail.com",
+                "IDempleado": 0,
+                "Ididioma": 1,
+                "IsActive": true
+            }
+            </remarks>
+        </member>
+        <member name="M:DistributedServices.Security.RestApi.Controllers.UsuarioController.ChangePassword(Application.DTO.Security.SecusuariosChangePasswordDTO)">
+            <summary>
+            Actualiza usuario
+            </summary>
+            <param name="oSecusuariosChangePasswordDTO"></param>
+            <returns></returns>
+            <remarks>
+            {
+                "Usuario": "12345",
+                "password": "12345",
+                "newPassword": "7896541"
+            }
+            </remarks>
+        </member>
+        <member name="M:DistributedServices.Security.RestApi.Controllers.UsuarioController.RestorePassword(Application.DTO.Security.SecusuariosDTO)">
+            <summary>
+            Restaurar password
+            </summary>
+            <param name="oSecusuariosDTO"></param>
+            <returns></returns>
+            <remarks>
+            {
+                "Usuario": "12345"
+            }
+            </remarks>
+        </member>
+        <member name="M:DistributedServices.Security.RestApi.Controllers.UsuarioController.GetRolByIdUsuario(Domain.Core.ModelFilter.BaseFilter)">
+            <summary>
+            Consulta de rol asignado al usuario
+            </summary>
+            <param name="oBaseFilter"></param>
+            <returns></returns>
+            <remarks>
+            {
+                "id": "51537"
+            }
+            </remarks>
+        </member>
+        <member name="M:DistributedServices.Security.RestApi.Controllers.UsuarioController.GetRolNoAssignedByIdUsuario(Domain.Core.ModelFilter.BaseFilter)">
+            <summary>
+            Consulta de roles no asignados por id de usuario
+            </summary>
+            <param name="oBaseFilter"></param>
+            <returns></returns>
+            <remarks>
+            {
+                "id": "51537"
+            }
+            </remarks>
+        </member>
+        <member name="M:DistributedServices.Security.RestApi.Controllers.UsuarioController.CreateUsuarioRol(Application.DTO.Security.UsuarioRolDTO)">
+            <summary>
+            Crear usuario rol
+            </summary>
+            <param name="oUsuarioRolDTO"></param>
+            <returns></returns>
+            <remarks>
+            {
+                "IdRol": 6,
+                "IdUsuario": 51537
+            }
+            </remarks>
+        </member>
+        <member name="M:DistributedServices.Security.RestApi.Controllers.UsuarioController.DeleteUsuarioRol(Application.DTO.Security.UsuarioRolDTO)">
+            <summary>
+            Eliminar usuario rol
+            </summary>
+            <param name="oUsuarioRolDTO"></param>
+            <returns></returns>
+            <remarks>
+            {
+                "IdRol": 6,
+                "IdUsuario": 51537
+            }
+            </remarks> 
+        </member>-->
+    </members>
+</doc>
