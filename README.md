@@ -131,7 +131,7 @@ DDD is an arquitecture that focuses on a domain aproach rather than a UI/Databas
        POSTMAN DELETE Exhibit
        ![image](https://user-images.githubusercontent.com/42946312/140684117-53c2cce6-2399-442b-b739-d40b6439a20f.png)
        
- ## Tecnology
+ ## Technologies
  
    The project was developed in Visual Studio 2019.
  
