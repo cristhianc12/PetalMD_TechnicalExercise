@@ -34,13 +34,18 @@ DDD is an architecture that focuses on a domain aproach rather than a UI/Databas
     * Response: The method returns a json with the token and the expiration date. This token is necessary to consume the CRUD methods.
 
     POSTMAN Authentication Exhibit
-    ![image](https://user-images.githubusercontent.com/42946312/140682021-8ba6d7d6-e11d-415d-b266-2306b777cb73.png)
-    
-    POSTMAN Token Exhibit: In the Auth option, the "Type" must be "Bearer Token". Paste the token you retrieved in step 1.
-    ![image](https://user-images.githubusercontent.com/42946312/140684242-5bfb8de3-5713-4403-8949-e88f1625f5c8.png)
-
+    ![image](https://user-images.githubusercontent.com/42946312/140682021-8ba6d7d6-e11d-415d-b266-2306b777cb73.png)        
 
  2. API Methods
+
+    #### Token Input
+    
+       To begin to use the methods described below, you need to input a valid token, otherwise the response will be 401 (Not Authorized).
+    
+       To enter the token, please go to "Auth" option and in the "Type" field please select "Bearer Token", after this paste the token you retrieved in step 1.
+    
+    POSTMAN Token Exhibit    
+    ![image](https://user-images.githubusercontent.com/42946312/140684242-5bfb8de3-5713-4403-8949-e88f1625f5c8.png)
  
     #### Retrieve Pokemon List
       
