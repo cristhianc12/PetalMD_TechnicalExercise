@@ -4,11 +4,11 @@
 ## Repository objective: 
    Present the required test given by PetalMD. The test consists of developing a Restful API to perform CRUD operations over a given csv file.
 
-## Applied Arquitecture: Domain-Driven-Design (DDD)
+## Applied Architecture: Domain-Driven-Design (DDD)
 
 ![image](https://user-images.githubusercontent.com/42946312/140680884-aeff050c-37c9-49a7-b397-346ca9d29fb4.png)
 
-DDD is an arquitecture that focuses on a domain aproach rather than a UI/Database orientation.
+DDD is an architecture that focuses on a domain aproach rather than a UI/Database orientation.
 
 ### Here are some brief key notes about DDD:
 
@@ -137,7 +137,7 @@ DDD is an arquitecture that focuses on a domain aproach rather than a UI/Databas
  
    * .NET Core 3.1
    * C#
-   * DDD Arquitecture
+   * DDD Architecture
    * JWT (JSON Web Token)
 
 ## Structure (DDD)
